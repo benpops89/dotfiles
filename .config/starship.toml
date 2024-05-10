@@ -1,0 +1,18 @@
+format = """
+$directory\
+$git_branch\
+$git_status
+$character
+"""
+
+add_newline = true
+
+[character]
+success_symbol = '[➜](bold green)'
+
+[directory]
+truncation_length = 1
+
+[git_branch]
+format = '[$symbol$branch]($style)'
+style = 'bold red'
