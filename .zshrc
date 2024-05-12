@@ -37,6 +37,7 @@ alias ls="eza --icons --group-directories-first"
 alias ll="eza -la --icons --group-directories-first"
 alias cd="z"
 alias cat="bat -pp"
+alias v="nvim"
 
 # Define function for managing dot files
 dots() {
