@@ -12,11 +12,6 @@ return {
           CursorLine = { bg = colors.none },
         }
       end,
-      integrations = {
-        cmp = true,
-        gitsigns = true,
-        telescope = true,
-      },
     },
   },
   {
