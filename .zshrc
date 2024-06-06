@@ -18,6 +18,7 @@ zplug "zdharma-continuum/fast-syntax-highlighting"
 zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-completions"
 zplug "Aloxaf/fzf-tab"
+zplug "wfxr/forgit"
 
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
