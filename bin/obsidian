@@ -1,0 +1,46 @@
+#!/bin/bash
+
+# Scripts to interact with Obsidian vault
+# work together with Neovim plugin
+
+# Define the vault location
+VAULT="/home/benpoppy/Documents/vault"
+
+function sort {
+	# Sort notes in inbox into correct folders
+
+	# Define mapping for folders
+	declare -A file_map
+	file_map["area"]="2.Areas"
+	file_map["resource"]="3.Resources"
+
+	count=0
+	rg '(area|resource):\s*[\w]+' -oPt md "$VAULT/0.Inbox" | while read -r line; do
+		filename=$(echo "$line" | awk -F':' '{print $1}')
+		field=$(echo "$line" | awk -F':' '{print $2}')
+		value=$(echo "$line" | awk -F':' ' {sub(/^ +/, "", $3); print $3}')
+
+		mv "$filename" "$VAULT/${file_map["$field"]}/${value^}/"
+		((count++))
+	done
+
+	echo "$count files move"
+}
+
+if [[ $# -eq 0 ]]; then
+	echo "Usage: $(basename "$0") {sort|new}"
+	exit 1
+fi
+
+case "$1" in
+sort)
+	sort
+	;;
+new)
+	echo "Not implemented"
+	;;
+*)
+	echo "Unknown subcommand: $1"
+	exit 1
+	;;
+esac
