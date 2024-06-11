@@ -39,6 +39,8 @@ alias ll="eza -la --icons --group-directories-first"
 alias cd="z"
 alias cat="bat -pp"
 alias v="nvim"
+alias oc="obsidian organise"
+alias on="obsidian new"
 
 # Define function for managing dot files
 dots() {

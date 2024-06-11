@@ -6,8 +6,8 @@
 # Define the vault location
 VAULT="/home/benpoppy/Documents/vault"
 
-function sort() {
-	# Sort notes in inbox into correct folders
+function organise() {
+	# Organise notes in inbox into correct folders
 
 	# Define mapping for folders
 	declare -A file_map
@@ -47,8 +47,8 @@ if [[ $# -eq 0 ]]; then
 fi
 
 case "$1" in
-sort)
-	sort
+organise)
+	organise
 	;;
 new)
 	if [[ -z "$2" ]]; then
