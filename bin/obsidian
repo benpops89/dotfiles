@@ -6,7 +6,7 @@
 # Define the vault location
 VAULT="/home/benpoppy/Documents/vault"
 
-function sort {
+function sort() {
 	# Sort notes in inbox into correct folders
 
 	# Define mapping for folders
@@ -27,6 +27,20 @@ function sort {
 	echo "$count files move"
 }
 
+function new() {
+	# Open a new note in 0.Inbox with the filename provided
+
+	filename=$(echo $1 | tr ' ' '-' | sed 's/.*/\L&/')
+	note_title=$(date +%s)-$filename.md
+
+	cd "$VAULT/0.Inbox" || {
+		echo "Failed to navigate to $VAULT/0.Inbox"
+		exit 1
+	}
+
+	nvim "$note_title" -c "ObsidianNew $1"
+}
+
 if [[ $# -eq 0 ]]; then
 	echo "Usage: $(basename "$0") {sort|new}"
 	exit 1
@@ -37,7 +51,11 @@ sort)
 	sort
 	;;
 new)
-	echo "Not implemented"
+	if [[ -z "$2" ]]; then
+		echo "Usage: $(basename "$0") new <filename>"
+		exit 1
+	fi
+	new "$2"
 	;;
 *)
 	echo "Unknown subcommand: $1"
