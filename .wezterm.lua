@@ -17,7 +17,7 @@ local config = {
 	color_scheme = "Catppuccin Macchiato",
 
 	-- Fonts
-	font_size = 14.0,
+	font_size = 12.0,
 
 	-- Key mappings
 	keys = {
