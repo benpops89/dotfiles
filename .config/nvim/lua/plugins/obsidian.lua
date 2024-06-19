@@ -3,8 +3,8 @@ return {
   version = "*",
   lazy = true,
   event = {
-    "BufReadPre /home/benpoppy/Documents/vault/**.md",
-    "BufNewFile /home/benpoppy/Documents/vault/**.md",
+    "BufReadPre " .. vim.fn.expand("~") .. "/Documents/vault/**.md",
+    "BufNewFile " .. vim.fn.expand("~") .. "/Documents/vault/**.md",
   },
   dependencies = {
     "nvim-lua/plenary.nvim",
@@ -13,7 +13,7 @@ return {
     workspaces = {
       {
         name = "personal",
-        path = "/home/benpoppy/Documents/vault",
+        path = vim.fn.expand("~") .. "/Documents/vault",
       },
     },
     notes_subdir = "0.Inbox",
