@@ -4,7 +4,7 @@
 # work together with Neovim plugin
 
 # Define the vault location
-VAULT="/home/benpoppy/Documents/vault"
+VAULT="$HOME/Documents/vault"
 
 function organise() {
 	# Organise notes in inbox into correct folders
