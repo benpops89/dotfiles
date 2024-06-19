@@ -1,8 +1,9 @@
 # Add homebrew and local bin to path
-export PATH="/home/linuxbrew/.linuxbrew/bin:/home/benpoppy/bin:$PATH"
+export PATH="$HOME/bin:$PATH"
 
 # Setup zplug
-export ZPLUG_HOME=/home/linuxbrew/.linuxbrew/opt/zplug
+BREW_PATH="$(which brew | sed 's/\/bin\/brew$//')"
+export ZPLUG_HOME="$BREW_PATH/opt/zplug"
 source $ZPLUG_HOME/init.zsh
 
 # History settings
