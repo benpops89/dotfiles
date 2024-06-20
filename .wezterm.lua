@@ -1,4 +1,13 @@
 local wezterm = require("wezterm")
+
+local function get_font_size()
+	if wezterm.target_triple == "aarch64-apple-darwin" then
+		return 16.0
+	elseif wezterm.target_triple == "x86_64-unknown-linux-gnu" then
+		return 12.0
+	end
+end
+
 local config = {
 
 	-- General settings
@@ -17,7 +26,7 @@ local config = {
 	color_scheme = "Catppuccin Macchiato",
 
 	-- Fonts
-	font_size = 12.0,
+	font_size = get_font_size(),
 
 	-- Key mappings
 	keys = {
