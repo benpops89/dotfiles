@@ -1,4 +1,5 @@
 local wezterm = require("wezterm")
+local act = wezterm.action
 
 local function get_font_size()
 	if wezterm.target_triple == "aarch64-apple-darwin" then
@@ -12,6 +13,7 @@ local config = {
 
 	-- General settings
 	enable_tab_bar = false,
+	-- debug_key_events = true,
 
 	-- MacOS specific settings
 	native_macos_fullscreen_mode = false,
@@ -33,7 +35,7 @@ local config = {
 		{
 			key = "Enter",
 			mods = "ALT",
-			action = wezterm.action.ToggleFullScreen,
+			action = act.ToggleFullScreen,
 		},
 	},
 }
