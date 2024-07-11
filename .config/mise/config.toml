@@ -1,0 +1,8 @@
+[env]
+MISE_EXPERIMENTAL = 1
+
+[tools]
+python = '3.11'
+'pipx:uv' = 'latest'
+'pipx:ruff' = 'latest'
+
