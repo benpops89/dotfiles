@@ -5,6 +5,8 @@ $git_status
 $character
 """
 
+right_format = """$python"""
+
 add_newline = true
 
 [character]
@@ -16,3 +18,7 @@ truncation_length = 1
 [git_branch]
 format = '[$symbol$branch]($style)'
 style = 'bold red'
+
+[python]
+format = '[${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
+detect_folders = ['.venv']
