@@ -1,5 +1,8 @@
-# Add homebrew and local bin to path
+# Add local bin to path
 export PATH="$HOME/bin:$PATH"
+if [[ "$(uname)" == "Linux" ]]; then
+    export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
+fi
 
 # Setup zplug
 BREW_PATH="$(which brew | sed 's/\/bin\/brew$//')"
