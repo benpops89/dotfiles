@@ -5,4 +5,5 @@ MISE_EXPERIMENTAL = 1
 python = '3.11'
 'pipx:uv' = 'latest'
 'pipx:ruff' = 'latest'
+ruby = '3.3'
 
