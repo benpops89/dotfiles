@@ -66,9 +66,6 @@ bindkey  "^[[H"   beginning-of-line
 bindkey  "^[[F"   end-of-line
 bindkey  "^[[3~"  delete-char
 
-source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
-source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
-
 # Shell integrations
 eval "$(mise activate zsh)"
 eval "$(fzf --zsh)"
