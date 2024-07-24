@@ -1,9 +1,9 @@
-[env]
-MISE_EXPERIMENTAL = 1
-
 [tools]
 python = '3.11'
 'pipx:uv' = 'latest'
 'pipx:ruff' = 'latest'
 ruby = '3.3'
+node = '20'
 
+[settings]
+experimental = true
