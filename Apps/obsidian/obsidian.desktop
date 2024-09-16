@@ -1,9 +1,9 @@
 [Desktop Entry]
 Name=Obsidian
-Exec=/home/benpoppy/obsidian/Obsidian.AppImage %U
+Exec=/home/benpoppy/Apps/obsidian/Obsidian.AppImage %U
 Terminal=false
 Type=Application
-Icon=/home/benpoppy/obsidian/obsidian-icon.png
+Icon=/home/benpoppy/Apps/obsidian/obsidian-icon.png
 StartupWMClass=obsidian
 X-AppImage-Version=1.5.12
 Comment=Obsidian
