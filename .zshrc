@@ -46,7 +46,8 @@ alias cat="bat -pp"
 alias v="nvim"
 alias oc="obsidian organise"
 alias on="obsidian new"
-alias g="lazygit"
+alias lg="lazygit -ucd ~/.config/lazygit"
+alias mr="mise run"
 
 # Define function for managing dot files
 dots() {
