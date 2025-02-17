@@ -6,6 +6,7 @@ function openAndMaximizeObsidian(pageName)
 
 	-- Open Obsidian at that page
 	local url = "obsidian://open?vault=vault&file=" .. hs.http.encodeForQuery(pageName)
+	hs.spaces.gotoSpace(1)
 	hs.urlevent.openURL(url)
 
 	-- hs.application.launchOrFocus("Obsidian")
@@ -39,9 +40,21 @@ end
 
 hs.hotkey.bind({ "cmd", "alt", "ctrl" }, "W", function()
 	hs.notify.new({ title = "Hammerspoon", informativeText = "Hello World" }):send()
+	hs.spotify.playTrack("spotify:track:3MrRksHupTVEQ7YbA0FsZK")
+	hs.spaces.gotoSpace(1)
 end)
 
--- Open Obsidian every Friday
+-- Daily Review Automation
+hs.timer.doAt("16:10", "1d", function()
+	local date = os.date("*t")
+	if date.wday >= 2 and date.wday <= 6 then
+		hs.spotify.playTrack("spotify:track:3MrRksHupTVEQ7YbA0FsZK")
+		hs.notify.new({ title = "Closedown Routine", informativeText = "It's time to review the day" }):send()
+		openAndMaximizeObsidian("4.Reviews/1.Weekly/" .. os.date("%Y-%m-%d"))
+	end
+end)
+
+-- Weekly Review Automation
 hs.timer.doAt("16:00", "1d", function()
 	local day = os.date("*t").wday
 	if day == 6 then
