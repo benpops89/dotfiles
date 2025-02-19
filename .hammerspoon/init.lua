@@ -40,25 +40,23 @@ end
 
 hs.hotkey.bind({ "cmd", "alt", "ctrl" }, "W", function()
 	hs.notify.new({ title = "Hammerspoon", informativeText = "Hello World" }):send()
-	hs.spotify.playTrack("spotify:track:3MrRksHupTVEQ7YbA0FsZK")
+	hs.spotify.playTrack("spotify:album:7k1Ki5pYinGM3lME2Tv3AM")
 	hs.spaces.gotoSpace(1)
 end)
 
 -- Daily Review Automation
-hs.timer.doAt("16:10", "1d", function()
+review = hs.timer.doAt("16:05", "1d", function()
 	local date = os.date("*t")
-	if date.wday >= 2 and date.wday <= 6 then
+	if date.wday >= 2 and date.wday <= 5 then
 		hs.spotify.playTrack("spotify:track:3MrRksHupTVEQ7YbA0FsZK")
 		hs.notify.new({ title = "Closedown Routine", informativeText = "It's time to review the day" }):send()
-		openAndMaximizeObsidian("4.Reviews/1.Weekly/" .. os.date("%Y-%m-%d"))
-	end
-end)
-
--- Weekly Review Automation
-hs.timer.doAt("16:00", "1d", function()
-	local day = os.date("*t").wday
-	if day == 6 then
-		local week = os.date("%Y-W%V")
-		openAndMaximizeObsidian("4.Reviews/1.Weekly/" .. week)
+		openAndMaximizeObsidian("4.Reviews/0.Daily/" .. os.date("%Y-%m-%d"))
+	elseif date.wday == 6 then
+		-- Carbon Based Lifeforms - Interloper
+		hs.spotify.playTrack("spotify:album:3g1Bz7vXLd0GgxHId19oqc")
+		-- Islands - Ludovico Einaudi
+		-- hs.spotify.playTrack("spotify:album:7k1Ki5pYinGM3lME2Tv3AM")
+		hs.notify.new({ title = "Weekly Review", informativeText = "It's time to review the week" }):send()
+		openAndMaximizeObsidian("4.Reviews/1.Weekly/" .. os.date("%Y-W%V"))
 	end
 end)
