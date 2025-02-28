@@ -44,9 +44,20 @@ hs.hotkey.bind({ "cmd", "alt", "ctrl" }, "W", function()
 	hs.spaces.gotoSpace(1)
 end)
 
--- Daily Review Automation
-review = hs.timer.doAt("16:05", "1d", function()
+function isLastFriday(today)
+	-- Check if today is Friday
+	local nextWeek = today + (7 * 86400)
+
+	return nextWeek.month ~= today.month
+end
+
+-- Review Automation
+review = hs.timer.doEvery(60, function()
 	local date = os.date("*t")
+	if date.hour ~= 16 or date.min ~= 10 then
+		return
+	end
+
 	if date.wday >= 2 and date.wday <= 5 then
 		hs.spotify.playTrack("spotify:track:3MrRksHupTVEQ7YbA0FsZK")
 		hs.notify.new({ title = "Closedown Routine", informativeText = "It's time to review the day" }):send()
@@ -56,7 +67,19 @@ review = hs.timer.doAt("16:05", "1d", function()
 		hs.spotify.playTrack("spotify:album:3g1Bz7vXLd0GgxHId19oqc")
 		-- Islands - Ludovico Einaudi
 		-- hs.spotify.playTrack("spotify:album:7k1Ki5pYinGM3lME2Tv3AM")
-		hs.notify.new({ title = "Weekly Review", informativeText = "It's time to review the week" }):send()
-		openAndMaximizeObsidian("4.Reviews/1.Weekly/" .. os.date("%Y-W%V"))
+
+		-- Is it a Weekly or Monthly Review?
+		local title
+		local notePath
+		if isLastFriday(date) then
+			title = "Monthly Review"
+			notePath = "4.Reviews/2.Monthly/" .. os.date("%Y-%m")
+		else
+			title = "Weekly Review"
+			notePath = "4.Reviews/1.Weekly/" .. os.date("%Y-W%V")
+		end
+
+		hs.notify.new({ title = title, informativeText = "It's time to start the review" }):send()
+		openAndMaximizeObsidian(notePath)
 	end
 end)
