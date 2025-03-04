@@ -44,17 +44,16 @@ hs.hotkey.bind({ "cmd", "alt", "ctrl" }, "W", function()
 	hs.spaces.gotoSpace(1)
 end)
 
-function isLastFriday(today)
-	-- Check if today is Friday
-	local nextWeek = today + (7 * 86400)
-
-	return nextWeek.month ~= today.month
+function isLastFriday()
+	local today = os.date("*t")
+	local nextWeek = os.date("*t", os.time(today) + (7 * 86400))
+	return today.wday == 6 and nextWeek.month ~= today.month
 end
 
 -- Review Automation
 review = hs.timer.doEvery(60, function()
 	local date = os.date("*t")
-	if date.hour ~= 16 or date.min ~= 10 then
+	if date.hour ~= 16 or date.min ~= 39 then
 		return
 	end
 
@@ -71,7 +70,7 @@ review = hs.timer.doEvery(60, function()
 		-- Is it a Weekly or Monthly Review?
 		local title
 		local notePath
-		if isLastFriday(date) then
+		if isLastFriday() then
 			title = "Monthly Review"
 			notePath = "4.Reviews/2.Monthly/" .. os.date("%Y-%m")
 		else
