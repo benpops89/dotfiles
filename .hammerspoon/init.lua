@@ -53,7 +53,7 @@ end
 -- Review Automation
 review = hs.timer.doEvery(60, function()
 	local date = os.date("*t")
-	if date.hour ~= 16 or date.min ~= 39 then
+	if date.hour ~= 16 or date.min ~= 15 then
 		return
 	end
 
