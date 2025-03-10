@@ -1,0 +1,7 @@
+# Ghostty Configuration
+
+theme = catppuccin-frappe
+background-opacity = 0.9
+window-decoration = none
+window-padding-balance = true
+adjust-cell-height = 20%
