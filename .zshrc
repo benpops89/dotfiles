@@ -5,6 +5,7 @@ if [[ "$(uname)" == "Linux" ]]; then
 fi
 
 # History settings
+HISTTIMEFORMAT="%F %T "
 HISTSIZE=1000000
 HISTFILE=$HOME/.zsh_history
 SAVEHIST=1000000
@@ -34,6 +35,11 @@ alias mr="mise run"
 dots() {
     git --git-dir=$HOME/.dotfiles --work-tree=$HOME "$@"
 }
+
+# Load environment variables from .env file if it exists
+if [[ -f "$HOME/.env" ]]; then
+    export $(grep -v '^#' "$HOME/.env" | xargs)
+fi
 
 export ANTHROPIC_API_KEY=$(cat ~/.keys/claude.txt)
 
