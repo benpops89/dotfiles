@@ -1,22 +1,25 @@
 [tools]
 python = '3.11'
-ruby = '3.3'
+ruby = "latest"
 node = '20'
 # gcloud = "latest"
 zig = "latest"
 rust = "latest"
 bun = "latest"
 
+bob = "4.1.1"
+opencode = "latest"
 sops = "latest"
+packer = "1.9.4"
+gum = "0.17.0"
+tmux = "3.6a"
+television = "0.15.3"
 
 # Aqua backend
 "aqua:kubernetes/kubectl" = "1.33.2"
 "aqua:helm/helm" = "v3.18.4"
 "aqua:hashicorp/terraform" = "1.12.2"
 "aqua:gruntwork-io/terragrunt" = "v0.83.1"
-
-# Cargo
-"cargo:bob-nvim" = "4.1.1"
 
 # Github backend
 "github:FiloSottile/age" = "v1.2.0"
@@ -31,11 +34,11 @@ sops = "latest"
 "github:ajeetdsouza/zoxide" = "0.9.8"
 "github:starship/starship" = "v1.23.0"
 "github:ducaale/xh" = "v0.24.1"
-"github:zellij-org/zellij" = "v0.42.2"
+"github:zellij-org/zellij" = "v0.43.1"
 "github:dandavison/delta" = "0.18.2"
 "github:siderolabs/talos" = { version = "v1.10.5", rename_exe = "talosctl" }
+"github:mongodb-js/mongosh" = { version = "2.7.0", asset_pattern = "mongosh-*linux-x64-openssl3.tgz" }
 "github:jj-vcs/jj" = "v0.31.0"
-"github:mongodb-js/mongosh" = "2.5.5"
 "github:rossmacarthur/sheldon" = "0.8.4"
 "github:antonmedv/fx" = "37.0.1"
 "github:yt-dlp/yt-dlp" = { version = "2025.07.21", rename_exe = "yt" }
@@ -43,9 +46,10 @@ sops = "latest"
 "github:tailwindlabs/tailwindcss" = "v4.1.12"
 "github:jdx/fnox" = "v1.7.0"
 "github:docker/docker-credential-helpers" = { version= "v0.9.5", bin = "docker-credential-pass" }
-
-# NPM backend
-"npm:opencode-ai" = "latest"
+"github:robzolkos/fizzy-cli" = "v3.0.1"
+"github:cross-rs/cross" = "v0.2.5"
+"github:arl/gitmux" = "v0.11.5"
+"github:joshmedeski/sesh" = "v2.24.2"
 
 # pipx backend
 "pipx:ansible-core" = "2.19.0"
