@@ -6,3 +6,4 @@ prefix = "fnox/"
 
 [secrets]
 MISE_GITHUB_TOKEN= { provider = "pass", value = "MISE_GITHUB_TOKEN" }
+GITHUB_PACKAGE_TOKEN= { provider = "pass", value = "GITHUB_PACKAGE_TOKEN" }

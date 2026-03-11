@@ -14,7 +14,7 @@
       "enabled": true
     }
   },
-  "theme": "catppuccin",
+  "theme": "system",
   "provider": {
     "ollama": {
       "npm": "@ai-sdk/openai-compatible",

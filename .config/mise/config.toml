@@ -42,6 +42,7 @@ sops = "latest"
 "github:charmbracelet/crush" = "v0.4.0"
 "github:tailwindlabs/tailwindcss" = "v4.1.12"
 "github:jdx/fnox" = "v1.7.0"
+"github:docker/docker-credential-helpers" = { version= "v0.9.5", bin = "docker-credential-pass" }
 
 # NPM backend
 "npm:opencode-ai" = "latest"
