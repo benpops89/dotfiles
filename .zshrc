@@ -54,6 +54,7 @@ bindkey  "^[[3~"  delete-char
 # Shell integrations
 eval "$(mise activate zsh)"
 eval "$(fzf --zsh)"
+eval "$(tv init zsh)"
 eval "$(zoxide init zsh)"
 eval "$(sheldon source)"
 eval "$(starship init zsh)"
