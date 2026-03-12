@@ -16,7 +16,7 @@ local config = wezterm.config_builder()
 local function get_font_size()
 	-- Using 'find' is safer in case the triple string varies slightly
 	if wezterm.target_triple:find("apple") then
-		return 16.0
+		return 18.0
 	else
 		return 14.0
 	end
