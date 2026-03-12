@@ -34,7 +34,7 @@ config.send_composed_key_when_left_alt_is_pressed = false
 config.send_composed_key_when_right_alt_is_pressed = false
 
 -- Window settings
-config.window_background_opacity = 0.8
+config.window_background_opacity = 0.7
 config.window_decorations = "RESIZE"
 config.adjust_window_size_when_changing_font_size = false
 
