@@ -3,35 +3,4 @@
   "plugin": [
     "opencode-gemini-auth@latest"
   ],
-  "mcp": {
-    "fizzy": {
-      "type": "local",
-      "command": [
-        "bash",
-        "-c",
-        "uv run --env-file .env --directory \"$HOME/github/fizzy-mcp\" server.py"
-      ],
-      "enabled": true
-    }
-  },
-  "provider": {
-    "ollama": {
-      "npm": "@ai-sdk/openai-compatible",
-      "name": "Ollama",
-      "options": {
-        "baseURL": "http://10.0.1.200:11434/v1"
-      },
-      "models": {
-        "qwen3-coder": {
-          "name": "Qwen3-Coder"
-        },
-        "qwen2.5-coder:14b-instruct-q4_K_M-8k": {
-          "name": "Qwen2.5-Coder",
-        },
-        "codestral": {
-          "name": "Codestral"
-        }
-      }
-    }
-  }
 }

@@ -1,9 +1,16 @@
-# Ghostty Configuration
+#    ██████╗ ██╗  ██╗ ██████╗ ███████╗████████╗████████╗██╗   ██╗
+#   ██╔════╝ ██║  ██║██╔═══██╗██╔════╝╚══██╔══╝╚══██╔══╝╚██╗ ██╔╝
+#   ██║  ███╗███████║██║   ██║███████╗   ██║      ██║    ╚████╔╝ 
+#   ██║   ██║██╔══██║██║   ██║╚════██║   ██║      ██║     ╚██╔╝  
+#   ╚██████╔╝██║  ██║╚██████╔╝███████║   ██║      ██║      ██║   
+#    ╚═════╝ ╚═╝  ╚═╝ ╚═════╝ ╚══════╝   ╚═╝      ╚═╝      ╚═╝   
 
-theme = catppuccin-frappe
+# https://github.com/ghostty-org/ghostty
+
+theme = catppuccin-macchiato
+
 background-opacity = 0.9
 window-decoration = none
 window-padding-balance = true
 window-padding-x = 5
 window-padding-y = 4
-adjust-cell-height = 20%

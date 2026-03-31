@@ -1,60 +1,47 @@
+#   ███╗   ███╗██╗███████╗███████╗
+#   ████╗ ████║██║██╔════╝██╔════╝
+#   ██╔████╔██║██║███████╗█████╗  
+#   ██║╚██╔╝██║██║╚════██║██╔══╝  
+#   ██║ ╚═╝ ██║██║███████║███████╗
+#   ╚═╝     ╚═╝╚═╝╚══════╝╚══════╝
+
+# https://github.com/jdx/mise
+
 [tools]
-python = '3.11'
-ruby = "latest"
-node = '20'
-zig = "latest"
-rust = "latest"
 bun = "latest"
+node = "20"
+python = "3.14"
 
-bob = "4.1.1"
-opencode = "latest"
-sops = "latest"
-packer = "1.9.4"
-gum = "0.17.0"
-tmux = "3.6a"
-television = "0.15.3"
+bat = "0.26.1"
+bob = "4.1.6"
+delta = "0.19.2"
 eza = "0.23.4"
-fzf = "0.67.0"
-kubectl = "1.33.2"
-helm = "v3.18.4"
-terraform = "1.12.2"
-terragrunt = "v0.83.1"
-ansible-core = "2.18.0"
+fd = "10.4.2"
+fnox = "1.19.0"
+fx = "39.2.0"
+jj = "0.39.0"
+jq = "jq-1.8.1"
+lazygit = "0.25.0"
+mongosh = "2.8.2"
+neovim = "0.12.0"
+opencode = "1.3.8"
+packer = "1.9.4"
+ripgrep = "15.1.0"
+television = "0.15.4"
+terraform = "1.14.8"
+terragrunt = "v0.99.5"
+tmux = "3.6a"
+xh = "0.25.3"
+yq = "4.25.5"
+zoxide = "0.9.9"
 
-# Github backend
-"github:FiloSottile/age" = "v1.2.0"
-"github:sharkdp/bat" = "v0.25.0"
-"github:sharkdp/fd" = "v10.2.0"
-"github:BurntSushi/ripgrep" = { version = "14.1.1", exe = "rg" }
-"github:jqlang/jq" = "jq-1.8.1"
-"github:mikefarah/yq" = "v4.45.4"
-"github:jesseduffield/lazygit" = "v0.47.2"
-"github:astral-sh/uv" = "0.7.20"
-"github:ajeetdsouza/zoxide" = "0.9.8"
-"github:starship/starship" = "v1.23.0"
-"github:ducaale/xh" = "v0.24.1"
-"github:zellij-org/zellij" = "v0.43.1"
-"github:dandavison/delta" = "0.18.2"
-"github:siderolabs/talos" = { version = "v1.10.5", rename_exe = "talosctl" }
-"github:mongodb-js/mongosh" = { version = "2.7.0", asset_pattern = "mongosh-*linux-x64-openssl3.tgz" }
-"github:jj-vcs/jj" = "v0.31.0"
-"github:rossmacarthur/sheldon" = "0.8.4"
-"github:antonmedv/fx" = "37.0.1"
-"github:yt-dlp/yt-dlp" = { version = "2025.07.21", rename_exe = "yt" }
-"github:charmbracelet/crush" = "v0.4.0"
-"github:tailwindlabs/tailwindcss" = "v4.1.12"
-"github:jdx/fnox" = "v1.7.0"
-"github:docker/docker-credential-helpers" = { version= "v0.9.5", bin = "docker-credential-pass" }
-"github:robzolkos/fizzy-cli" = "v3.0.1"
-# "github:cross-rs/cross" = "v0.2.5"
 "github:arl/gitmux" = "v0.11.5"
 "github:joshmedeski/sesh" = "v2.24.2"
+"github:rossmacarthur/sheldon" = "0.8.5"
 
 [env]
 MISE_NPM_BUN = true
 EDITOR = "nvim"
-
-watchexec = "latest"
 
 [settings]
 experimental = true

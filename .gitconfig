@@ -10,14 +10,11 @@
   pager = delta
 [interactive]
   diffFilter = delta --color-only
-[include]
-  path = ~/.config/delta/themes/catppuccin.gitconfig
 [delta]
   navigate = true  # use n and N to move between diff sections
-  dark = true      # or light = true, or omit for auto-detection
   features = catppuccin-macchiato
   side-by-side = true
 [merge]
   # Need to be on >= 2.35 to use zdiff3
   # Change when it's available
-  conflictstyle = diff3
+  conflictstyle = zdiff3

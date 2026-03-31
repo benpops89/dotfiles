@@ -1,7 +1,14 @@
+#   ███████╗████████╗ █████╗ ██████╗ ███████╗██╗  ██╗██╗██████╗ 
+#   ██╔════╝╚══██╔══╝██╔══██╗██╔══██╗██╔════╝██║  ██║██║██╔══██╗
+#   ███████╗   ██║   ███████║██████╔╝███████╗███████║██║██████╔╝
+#   ╚════██║   ██║   ██╔══██║██╔══██╗╚════██║██╔══██║██║██╔═══╝ 
+#   ███████║   ██║   ██║  ██║██║  ██║███████║██║  ██║██║██║     
+#   ╚══════╝   ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═╝╚═╝     
+
+# https://github.com/starship/starship
+
 format = """
 $directory\
-$git_branch\
-$git_status
 $character
 """
 
@@ -14,10 +21,6 @@ success_symbol = '[➜](bold green)'
 
 [directory]
 truncation_length = 1
-
-[git_branch]
-format = '[$symbol$branch]($style)'
-style = 'bold red'
 
 [python]
 format = '[${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
