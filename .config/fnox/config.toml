@@ -1,9 +1,6 @@
-default_provider = "pass"
-
-[providers.pass]
-type = "password-store"
-prefix = "fnox/"
+[providers.protonpass]
+type = "proton-pass"
+vault = "System"
 
 [secrets]
-MISE_GITHUB_TOKEN= { provider = "pass", value = "MISE_GITHUB_TOKEN" }
-GITHUB_PACKAGE_TOKEN= { provider = "pass", value = "GITHUB_PACKAGE_TOKEN" }
+MISE_GITHUB_TOKEN= { provider = "protonpass", value = "mise-token/Secret" }
