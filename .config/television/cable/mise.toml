@@ -1,0 +1,21 @@
+[metadata]
+name = "mise"
+description = "Browse mise registry tools and install them globally"
+requirements = ["mise"]
+
+[source]
+command = "mise registry 2>&1 | awk '{print $1}'"
+
+[preview]
+command = "mise ls-remote '{}' 2>&1"
+
+[ui.preview_panel]
+header = "Versions for {}"
+
+[keybindings]
+enter = "actions:install"
+
+[actions.install]
+description = "Install the tool globally"
+command = "mise use -g '{}'@latest"
+mode = "execute"
