@@ -4,3 +4,6 @@ vault = "System"
 
 [secrets]
 MISE_GITHUB_TOKEN= { provider = "protonpass", value = "mise-token/Secret" }
+OPENCODE_API_KEY= { provider = "protonpass", value = "opencode-go/API Key" }
+EXA_API_KEY= { provider = "protonpass", value = "exa/API Key" }
+FIRECRAWL_API_KEY= { provider = "protonpass", value = "firecrawl/API Key" }
